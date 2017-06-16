@@ -3,14 +3,13 @@
 ## Abstract
 To enhance system performance of future heterogeneous wireless networks the co-design of PHY, MAC, and higher
 layer protocols is inevitable. In this work, we present WiSCoP- a novel embedded platform for experimentation, prototyping
-and implementation of integrated cross-layer network design approaches. WiSCoP is built on top of a Zynq hardware platform
-integrated with FMCOMMS1/2/4 RF front-ends. We demonstrate the flexibility of WiSCoP by using it to prototype a fully standard compliant IEEE 802.15.4 stack with real-time performance and cross-layer integration.
-
+and implementation of integrated cross-layer network design approaches. WiSCoP is an SDR-based implementation of the IEEE 802.15.4 (Zigbee)
+standard built on top of a Zynq hardware platform integrated with FMCOMMS1/2/4 RF front-ends.
+We demonstrate the flexibility of WiSCoP by using it to prototype a fully standard compliant IEEE 802.15.4 stack with real-time performance and cross-layer integration.
 ## Motivation
 
 Traditional wireless industry solutions follow a layered design approach because it allows development of simple, modular and interoperable protocols. However, this principle causes information hiding between protocol layers, i.e. information about operation at one layer cannot be used by higher or lower layers. Therefore, radio chipset vendors offer limited coordination between physical
-(PHY), medium access control (MAC), and higher-layer protocols. As a result, PHY and MAC layer innovations are usually prototyped separately without the possibility for joint optimization and real-world evaluation. Also, different radio chipset have different capabilities and hardware specifics, evaluating the same MAC layer algorithm on different embedded platforms requires significant development time and effort. Furthermore, benchmarking innovative
-cross-layer PHY/MAC optimized algorithms on diverse platforms is almost impossible
+(PHY), medium access control (MAC), and higher-layer protocols. As a result, PHY and MAC layer innovations are usually prototyped separately without the possibility for joint optimization and real-world evaluation.
 
 Novel PHY algorithms are typically prototyped on SDR platforms. These platforms consist of a RF front-end and a
 host PC with CPU as main processing unit. However, CPUs cannot guarantee predictable processing latency due to its sequential
@@ -21,7 +20,7 @@ platforms. Due to diverse radio chipset capabilities and hardware specifics, eva
 different embedded platforms requires significant development time and effort. Furthermore, benchmarking innovative
 cross-layer PHY/MAC optimized algorithms on diverse platforms is almost impossible.
 
-To tackle this challenge, we present WiSCoP, a novel platform for prototyping cross-layer optimized protocols.
+To tackle this challenge, we present WiSCoP, a novel platform for prototyping cross-layer optimized protocols for WSNs.
 
 ## WiSCoP
 
@@ -29,8 +28,10 @@ To tackle this challenge, we present WiSCoP, a novel platform for prototyping cr
 
 
 
-WiSCoP is a FPGA-based real-time flexible IEEE 802.15.4 PHY layer implemented in HDL on top of Xilinx Zynq SoC with additional
+WiSCoP is a FPGA-based real-time flexible IEEE 802.15.4 (Zigbee) PHY layer implemented in HDL on top of Xilinx Zynq SoC with additional
 FMCOMMS1/2/4 RF front-ends, and drivers for flexible control of the IEEE 802.15.4 PHY layer  implemented in C.
+The WiSCoP platform is shipped in form of a FPGA bitstream (executable) together with the aforementioned drivers in C, that provide
+all the necessary interfaces for flexible radio/network control.
 For more details see our publication.
 To cite our work please use:
 
@@ -45,7 +46,7 @@ To cite our work please use:
 
 
 ## Code
-The code for WiSCoP is available only on the internal Ghent University repositories, as decided by Ghent University.
+At this moment, the code for WiSCoP is available only on the internal Ghent University repositories, as decided by Ghent University.
 
 ## Contact
 For more details do not hesitate to contact me:
